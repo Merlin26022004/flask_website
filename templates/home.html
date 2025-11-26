@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="home-container">
+        <h1 class="home-title">Welcome to the Home Page 🏠</h1>
+        <p class="home-text">This page is loaded from <strong>home.html</strong> using Flask.</p>
+
+        <button class="btn" onclick="goBack()">← Back to MCA Page</button>
+    </div>
+
+    <!-- External JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
