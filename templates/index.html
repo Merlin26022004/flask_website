@@ -1,130 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Merlin | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merlin Xavier | Portfolio</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="nav-logo">Merlin</div>
-        <nav class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#certs">Certifications</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Floating background shapes -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- HERO / TOP -->
+    <header class="top-hero">
+        <div class="brand-row">
+            <div class="brand">Merlin Xavier ✦</div>
+
+            <nav class="nav-links">
+                <a href="#about">About me</a>
+                <a href="#resume">Resume</a>
+                <a href="#projects">Work</a>
+            </nav>
+
+            <a href="#contact" class="btn-pill">Get in touch</a>
+        </div>
+
+        <div class="hero-main">
+            <!-- left: photo + quote -->
+            <div>
+                <div class="hero-photo-block">
+                    <div class="photo-bg"></div>
+                    <img src="{{ url_for('static', filename='img/merlin3.jpeg') }}" alt="Merlin" class="hero-photo">
+                </div>
+
+                <div class="hero-quote-wrapper">
+                    <span class="quote-mark-hero opening">"</span>
+                    <p class="hero-quote">
+                        Dedicated and motivated student pursuing Master of Computer Applications with a passion for
+                        coding
+                        and design. Seeking an opportunity to contribute to real-world projects while expanding
+                        technical and
+                        professional skills.
+                    </p>
+                    <span class="quote-mark-hero closing">"</span>
+                </div>
+            </div>
+
+            <!-- right: title + info -->
+            <div class="hero-right">
+                <h1 class="hero-title">PORTFOLIO</h1>
+                <div class="hero-title-outline">PORTFOLIO</div>
+                <div class="hero-title-outline second">PORTFOLIO</div>
+
+                <div class="hero-contact-mini">
+                    <p>📍 Kochi-682023, Kerala</p>
+                    <p>💻 Flutter · PHP · Python</p>
+                    <p>🎨 UI/UX · Web Development</p>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero" id="top">
-        <div class="hero-content">
-            <h1>Hi, I'm <span>Merlin Xavier</span> 👋</h1>
-            <p class="hero-sub">
-                MCA student with a background in Mobile Application & Cloud Computing, 
-                building clean web apps and practical tech solutions.
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary">View Projects</a>
-                <a href="#contact" class="btn outline">Contact Me</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- About -->
-    <section id="about" class="section">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-text">
-            I'm an MCA student with a BCA in Mobile Application and Cloud Computing.
-            I enjoy building practical applications, exploring web development, 
-            and improving my backend skills with Python, Flask, and Django.
-            I’ve also worked on startup projects like a pet care platform and an 
-            audition management app for the film industry.
-        </p>
-    </section>
+    <!-- CONTENT -->
+    <main class="page">
 
-    <!-- Skills -->
-    <section id="skills" class="section">
-        <h2 class="section-title">Skills</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Languages</h3>
-                <p>Python, Java, C, JavaScript, C++</p>
-            </div>
-            <div class="card">
-                <h3>Web & App</h3>
-                <p>HTML, CSS, Flask, Django (basics), Flutter (basics)</p>
-            </div>
-            <div class="card">
-                <h3>Databases</h3>
-                <p>MySQL, Oracle, SQLyog</p>
-            </div>
-            <div class="card">
-                <h3>Others</h3>
-                <p>Git, Figma, Linux basics, Problem Solving</p>
-            </div>
-        </div>
-    </section>
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <h1 class="about-intro">Hello,<br>I'm Merlin !</h1>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Projects</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>CastMe – Audition Platform</h3>
-                <p>
-                    A Flutter + Flask-based app that connects actors and casting directors. 
-                    Features include profile creation, audition listings, and shortlisting.
+
+            <div class="about-content">
+                <div class="about-card">
+                    <p>
+                        I am a dedicated MCA student with a BCA in Mobile Application and Cloud Computing.
+                        I love turning ideas into working apps and learning by building. I've worked on projects
+                        like CastMe (casting platform) and PET.RA (pet care startup), focusing on both UI design
+                        and front-end. Currently pursuing my Master's at Rajagiri College of Social
+                        Sciences,
+                        Kalamassery.
+                    </p>
+                </div>
+
+                <div class="about-image-container">
+                    <img src="{{ url_for('static', filename='img/merlin7.png') }}" alt="Merlin" class="about-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="section">
+            <div class="timeline-section">
+                <h3>Education</h3>
+
+                <div class="timeline-item">
+                    <div class="year-badge">2025 - 2027</div>
+                    <div class="timeline-content">
+                        <h4>Rajagiri College of Social Sciences, Kalamassery</h4>
+                        <p>Master of Computer Applications (MCA)</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year-badge">2022 - 2025</div>
+                    <div class="timeline-content">
+                        <h4>Sacred Heart College, Thevara - 8.16 CGPA</h4>
+                        <p>Bachelor of Computer Applications (BCA) with specialization in Mobile Application and Cloud
+                            Computing</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year-badge">2009 - 2022</div>
+                    <div class="timeline-content">
+                        <h4>Don Bosco Senior Secondary School, Vaduthala</h4>
+                        <p>ISC (12th) - 83.5% | ICSE (10th) - 89.6%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="timeline-section">
+                <h3>Experience</h3>
+
+                <div class="timeline-item">
+                    <div class="year-badge">2024 - Present</div>
+                    <div class="timeline-content">
+                        <h4>PET.RA - Academic Startup Collaboration</h4>
+                        <p>Worked on UI mockups, app flow, and feature planning for the PET.RA platform, and assisted
+                            the digital marketing team with content creation.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year-badge">May 2024</div>
+                    <div class="timeline-content">
+                        <h4>WeCodeLife, Edappally | Flutter Intern</h4>
+                        <p>Contributed to mobile app development (Flutter) and design, collaborated with a dynamic team.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chip-row">
+                <span>#Creativity</span>
+                <span>#Communication</span>
+                <span>#Adaptability</span>
+                <span>#TeamWork</span>
+            </div>
+        </section>
+
+        <!-- RESUME -->
+        <section id="resume" class="resume-section">
+
+            <!-- TECHNICAL SKILLS -->
+            <section id="skills" class="section">
+                <h2>Technical skills</h2>
+
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-badges">
+                            <div class="skill-badge">
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-badge">
+                                <span>Dart (Flutter)</span>
+                            </div>
+                            <div class="skill-badge">
+                                <span>C</span>
+                            </div>
+                            <div class="skill-badge">
+                                <span>C++</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Web Development</h3>
+                        <div class="skill-badges">
+                            <div class="skill-badge">
+                                <span>HTML</span>
+                            </div>
+                            <div class="skill-badge">
+                                <span>CSS</span>
+                            </div>
+                            <div class="skill-badge">
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tools & Technologies</h3>
+                        <div class="skill-badges">
+                            <div class="skill-badge">
+                                <span>Android Studio</span>
+                            </div>
+                            <div class="skill-badge">
+                                <span>Git/GitHub</span>
+                            </div>
+                            <div class="skill-badge">
+                                <span>VS Code</span>
+                            </div>
+                            <div class="skill-badge">
+                                <span>Figma</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Database Management</h3>
+                        <div class="skill-badges">
+                            <div class="skill-badge">
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+
+            <div class="book-timeline">
+                <div class="book-page">
+                    <div class="page-left">
+                        <h3>CastMe App</h3>
+                    </div>
+                    <div class="page-right">
+                        <p><strong>Dart (Flutter), PHP, CSS, MySQL</strong><br>
+                            Casting platform connecting artists and directors with comprehensive features for auditions
+                            and talent management.</p>
+                    </div>
+                </div>
+
+                <div class="book-page">
+                    <div class="page-left">
+                        <h3>Art Gallery Website</h3>
+                    </div>
+                    <div class="page-right">
+                        <p><strong>PHP, MySQL, HTML</strong><br>
+                            Online gallery with CRUD features for managing and displaying artwork collections.</p>
+                    </div>
+                </div>
+
+                <div class="book-page">
+                    <div class="page-left">
+                        <h3>Mini Flutter Apps</h3>
+                    </div>
+                    <div class="page-right">
+                        <p><strong>Flutter</strong><br>
+                            News, weather, and phonebook apps focusing on UI and API use, demonstrating mobile
+                            development skills.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section id="languages" class="section">
+            <h2>Language</h2>
+
+            <div class="language-grid">
+                <div class="language-card">
+                    <h4>Malayalam</h4>
+                    <p>Native</p>
+                </div>
+                <div class="language-card">
+                    <h4>English</h4>
+                    <p>Fluent</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADDITIONAL INFO -->
+        <section id="additional" class="section">
+            <h2>Additional Information</h2>
+
+            <div class="about-card">
+                <h4 style="margin-bottom: 12px; font-weight: 700;">Certifications</h4>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>Cyber Security & Ethical Hacking (TechByHeart)</li>
+                    <li>Workshop on Emerging Technologies</li>
+                    <li>Workshop on Website Designing</li>
+                </ul>
+
+                <h4 style="margin-top: 20px; margin-bottom: 12px; font-weight: 700;">Volunteering</h4>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>Revive Kochi project</li>
+                    <li>Kochi Spice Coast Marathon</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- HOBBIES -->
+        <section id="hobbies" class="section">
+            <h2>Hobbies & Interests</h2>
+
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-icon">💻</div>
+                    <h4>Coding</h4>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🎨</div>
+                    <h4>Design</h4>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">📱</div>
+                    <h4>App Dev</h4>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🎮</div>
+                    <h4>Gaming</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+
+            <div class="contact-card">
+                <p><strong>📩 Email:</strong> <a href="mailto:merlinfathima88@gmail.com">merlinfathima88@gmail.com</a>
                 </p>
+                <p><strong>📞 Phone:</strong> <a href="tel:+919778259939">+91 9778259939</a></p>
+                <p><strong>📍 Location:</strong> Kochi-682023, Kerala</p>
+                <p><strong>💻 GitHub:</strong> <a href="https://github.com/Merlin26022004"
+                        target="_blank">github.com/Merlin26022004</a></p>
+                <p><strong>🔗 LinkedIn:</strong> <a href="https://www.linkedin.com/in/merlin-xavier-34933a2b3"
+                        target="_blank">linkedin.com/in/merlin-xavier</a></p>
             </div>
-            <div class="card">
-                <h3>Petra – Pet Care Platform</h3>
-                <p>
-                    A startup project working on an all-in-one pet care solution with grooming, 
-                    vet bookings, subscriptions, and pet adoption (PetFinder).
-                </p>
-            </div>
-            <div class="card">
-                <h3>Academic Mini Projects</h3>
-                <p>
-                    Multiple projects in Flutter and other small projects in Java, C, and DBMS focusing on data structures, 
-                    basic CRUD apps, and command-line utilities.
-                </p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Certifications -->
-    <section id="certs" class="section">
-        <h2 class="section-title">Certifications & Activities</h2>
-        <ul class="list">
-            <li>30-hour value added program in Cyber Security and Ethical Hacking</li>
-            <li>Workshop on Web Development / Website Designing</li>
-            <li>Volunteering: Techfest coordination, college events</li>
-        </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-text">
-            I'm open to internships, projects, and collaborations.
-        </p>
-        <div class="contact-box">
-            <p>Email: <a href="mailto:merlinfathima88@gmail.com">merlinfathima88@gmail.com</a></p>
-            <p>LinkedIn: <a href="#" target="_blank">https://www.linkedin.com/in/merlin-xavier-34933a2b3</a></p>
-            <p>GitHub: <a href="#" target="_blank">https://github.com/Merlin26022004</a></p>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <button onclick="scrollToTop()" class="to-top">↑ Back to top</button>
-        <p>© {{ 2025 }} Merlin. Built with Flask.</p>
-    </footer>
+    </main>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
+
 </html>
