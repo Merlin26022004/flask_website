@@ -30,3 +30,5 @@ document.querySelectorAll(".section").forEach((sec) => {
 document.querySelectorAll(".book-page").forEach((page) => {
     observer.observe(page);
 });
+
+
