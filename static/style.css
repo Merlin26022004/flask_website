@@ -634,8 +634,18 @@ body {
 @media (max-width: 900px) {
 
     .hero-main,
-    .skills-container {
+    .skills-container,
+    .about-content {
         grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        gap: 30px;
+    }
+
+    .about-image-container {
+        margin-inline: auto;
+        max-width: 320px;
     }
 
     .brand-row {
