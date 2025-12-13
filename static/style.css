@@ -378,6 +378,11 @@ body {
     margin-bottom: 20px;
 }
 
+.timeline-content {
+    padding-top: 5px;
+    /* Adjust text to align with badge center */
+}
+
 .timeline-item:last-child {
     margin-bottom: 0;
 }
