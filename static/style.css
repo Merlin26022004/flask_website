@@ -633,10 +633,15 @@ body {
 /* RESPONSIVE */
 @media (max-width: 900px) {
 
-    .hero-main,
     .skills-container,
     .about-content {
         grid-template-columns: 1fr;
+    }
+
+    .hero-main {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
     }
 
     .about-content {
